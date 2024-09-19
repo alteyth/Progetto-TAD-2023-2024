@@ -35,12 +35,12 @@ ax[2, 0].plot(t, sq0)
 ax[2, 1].plot(t, sq1)
 ax[2, 2].plot(t, sq2)
 
-ax[2, 0].set_xlabel("Time (s)")
-ax[2, 1].set_xlabel("Time (s)")
-ax[2, 2].set_xlabel("Time (s)")
+ax[2, 0].set_xlabel("Tempo (s)")
+ax[2, 1].set_xlabel("Tempo (s)")
+ax[2, 2].set_xlabel("Tempo (s)")
 
-ax[0, 0].set_ylabel("sin")
-ax[1, 0].set_ylabel("sin")
-ax[2, 0].set_ylabel("sin")
+ax[0, 0].set_ylabel("Valore")
+ax[1, 0].set_ylabel("Valore")
+ax[2, 0].set_ylabel("Valore")
 
 plt.show()

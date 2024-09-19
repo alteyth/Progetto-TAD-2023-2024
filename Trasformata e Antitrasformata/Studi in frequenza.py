@@ -51,19 +51,21 @@ sq2_fft = np.fft.rfft(sq2, norm="forward")
 sq2_p = (np.abs(sq2_fft))**2
 
 # Plot
-# fig, ax = plt.subplots(nrows=3, ncols=3)
+fig, ax = plt.subplots(nrows=3, ncols=3)
 
-fig, ax = plt.subplots(nrows=1, ncols=3)
+# fig, ax = plt.subplots(nrows=1, ncols=3)
 
 # Composite Sin
-ax[0].plot(freq, sin_composite_fft.real)
-ax[1].plot(freq, sin_composite_fft.imag)
-ax[2].plot(freq, sin_composite_p)
-ax[0].set_title('Parte Reale')
-ax[1].set_title('Parte Immaginaria')
-ax[2].set_title('Spettro di Potenza')
-ax[1].set_xlabel("Freq")
-ax[0].set_ylabel("Amplitude")
+# ax[0].plot(freq, sin_composite_fft.real)
+# ax[1].plot(freq, sin_composite_fft.imag)
+# ax[2].plot(freq, sin_composite_p)
+# ax[0].set_title('Parte Reale')
+# ax[1].set_title('Parte Immaginaria')
+# ax[2].set_title('Spettro di Potenza')
+# ax[0].set_xlabel("Frequenza (Hz)")
+# ax[1].set_xlabel("Frequenza (Hz)")
+# ax[2].set_xlabel("Frequenza (Hz)")
+# ax[0].set_ylabel("Ampiezza")
 
 
 
@@ -90,28 +92,28 @@ ax[0].set_ylabel("Amplitude")
 # ax[2, 2].plot(freq, st2_p)
 
 # Square
-# ax[0, 0].plot(freq, sq0_fft.real)
-# ax[0, 1].plot(freq, sq1_fft.real)
-# ax[0, 2].plot(freq, sq2_fft.real)
-# ax[1, 0].plot(freq, sq0_fft.imag)
-# ax[1, 1].plot(freq, sq1_fft.imag)
-# ax[1, 2].plot(freq, sq2_fft.imag)
-# ax[2, 0].plot(freq, sq0_p)
-# ax[2, 1].plot(freq, sq1_p)
-# ax[2, 2].plot(freq, sq2_p)
+ax[0, 0].plot(freq, sq0_fft.real)
+ax[0, 1].plot(freq, sq1_fft.real)
+ax[0, 2].plot(freq, sq2_fft.real)
+ax[1, 0].plot(freq, sq0_fft.imag)
+ax[1, 1].plot(freq, sq1_fft.imag)
+ax[1, 2].plot(freq, sq2_fft.imag)
+ax[2, 0].plot(freq, sq0_p)
+ax[2, 1].plot(freq, sq1_p)
+ax[2, 2].plot(freq, sq2_p)
 
-fig.suptitle("Parte Reale, Immaginaria e Spettro di Potenza della FFT della somma dei Sin")
+fig.suptitle("Parte Reale, Immaginaria e Spettro di Potenza della FFT dell'Onda Quadra")
 
-# ax[0, 0].set_title('100hz')
-# ax[0, 1].set_title('200hz')
-# ax[0, 2].set_title('440hz')
+ax[0, 0].set_title('100hz')
+ax[0, 1].set_title('200hz')
+ax[0, 2].set_title('440hz')
 
-# ax[2, 0].set_xlabel("Freq")
-# ax[2, 1].set_xlabel("Freq")
-# ax[2, 2].set_xlabel("Freq")
+ax[2, 0].set_xlabel("Frequenza (Hz)")
+ax[2, 1].set_xlabel("Frequenza (Hz)")
+ax[2, 2].set_xlabel("Frequenza (Hz)")
 
-# ax[0, 0].set_ylabel("Amplitude")
-# ax[1, 0].set_ylabel("Amplitude")
-# ax[2, 0].set_ylabel("Amplitude")
+ax[0, 0].set_ylabel("Ampiezza")
+ax[1, 0].set_ylabel("Ampiezza")
+ax[2, 0].set_ylabel("Ampiezza")
 
 plt.show()

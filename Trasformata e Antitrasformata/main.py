@@ -25,7 +25,7 @@ if __name__ == '__main__':
         dft = (1 / 2) + (2 / np.pi) * sommatoria(y, f0, t)
         plt.plot(t, dft, label=f'{y} coefficienti')
     
-    plt.xlabel("Time")
-    plt.ylabel("Value")
+    plt.xlabel("Tempo(s)")
+    plt.ylabel("Valore")
     plt.legend()
     plt.show()
