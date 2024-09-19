@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy as sp
 
-# Construction of the Time Signal
+# Costruzione del Segnale
 f0 = 100
 f1 = 200
 f2 = 440
@@ -19,8 +19,6 @@ st2 = np.abs(sp.signal.sawtooth(2 * np.pi * f2 * t))
 sq0 = sp.signal.square(2*np.pi * f0 * t)
 sq1 = sp.signal.square(2*np.pi * f1 * t)
 sq2 = sp.signal.square(2*np.pi * f2 * t)
-
-# Compute FFT
 
 # Plot
 fig, ax = plt.subplots(nrows=3, ncols=3)
