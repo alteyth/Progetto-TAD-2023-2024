@@ -7,7 +7,7 @@ Fs = 10000
 durata = 0.03
 f0 = 100
 f1 = 200
-f2 = 300
+f2 = 440
 t = np.linspace(0, durata, int(Fs * durata))  # Time steps
 
 sin0 = 1 * np.sin(2*np.pi * f0 * t)

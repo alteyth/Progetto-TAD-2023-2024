@@ -5,7 +5,7 @@ import scipy as sp
 # Construction of the Time Signal
 f0 = 100
 f1 = 200
-f2 = 300
+f2 = 440
 t = np.linspace(0, 0.03, 1000)  # Time steps
 
 sin0 = 1 * np.sin(2*np.pi * f0 * t)
