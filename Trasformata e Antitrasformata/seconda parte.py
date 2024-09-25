@@ -43,4 +43,6 @@ ax[0, 0].set_ylabel("Valore")
 ax[1, 0].set_ylabel("Valore")
 ax[2, 0].set_ylabel("Valore")
 
+
+
 plt.show()
