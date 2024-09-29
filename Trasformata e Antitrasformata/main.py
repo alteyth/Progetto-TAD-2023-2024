@@ -10,7 +10,6 @@ def odd_k(n):
 
 # Calcola la sommatoria seguendo la formula sul PDF
 def sommatoria(m, f, l):
-    result = []
     x = 0
     k_numbers = odd_k(m)
     for i in k_numbers:
