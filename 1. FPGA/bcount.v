@@ -1,7 +1,7 @@
 module bcount(
 input clk,
 output reg [15:0] led
-    );
+);
 reg [32:0] counter;   
 reg oldcounter;
 
