@@ -8,7 +8,7 @@ if __name__ == '__main__':
     data, samplerate = sf.read(file)
     if np.ndim(data) > 1:
         data = np.mean(data, axis=1)
-    # sf.write("3. Garage Band/pulita_semplice_mono.wav", data, samplerate)
+    sf.write("3. Garage Band/pulita_semplice_mono.wav", data, samplerate)
     Time = np.linspace(0, len(data) / samplerate, num=len(data))
     data_fft = np.fft.rfft(data, norm="forward")
     data_imag = data_fft.imag
