@@ -2,7 +2,7 @@
 
 ## Studenti
 
-Simone Seria **344901**\
+Simone Seria **344091**\
 Giulia Diletta Fabbriciani **347101**
 
 ## Argomenti
