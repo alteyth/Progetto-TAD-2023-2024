@@ -5,7 +5,7 @@ import scipy.signal as signal
 import matplotlib.image as image
 
 if __name__ == '__main__':
-    image = image.imread("lena_std.tif")
+    image = image.imread("4. Trasformata 2D di Immagini/immagini/line_30deg.png")
     image = np.mean(image, axis=2)
     print(f"Numero di Dimensioni: {np.ndim(image)}")
     image_fft = fft.fft2(image)
