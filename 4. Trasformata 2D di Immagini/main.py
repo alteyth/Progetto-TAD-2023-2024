@@ -5,13 +5,14 @@ import scipy.signal as signal
 import matplotlib.image as image
 
 if __name__ == '__main__':
-    image = image.imread("4. Trasformata 2D di Immagini/immagini/line_30deg.png")
+    image = image.imread("4. Trasformata 2D di Immagini/immagini/line_0deg.png")
     image = np.mean(image, axis=2)
-    print(f"Numero di Dimensioni: {np.ndim(image)}")
+
     image_fft = fft.fft2(image)
-    print(image_fft.shape)
     image_fft_shifted = fft.fftshift(image_fft)
-    image_ps = np.abs(image_fft_shifted)
+    image_ps = np.abs(image_fft)
+    image_ps_shifted = np.abs(image_fft_shifted)
+    
     plt.imshow(image_ps, norm="log")
     plt.xlabel('Frequenza Righe')
     plt.ylabel('Frequenza Colonne')
