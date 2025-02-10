@@ -14,7 +14,7 @@ always @(posedge clk) begin
         if(controlR == 0 & btnR == 1 & !led[0]) begin
             led <= led >> 1;
         end
-        if(controlL == 0 &^btnL == 1 & !led[15]) begin
+        if(controlL == 0 & btnL == 1 & !led[15]) begin
             led <= led << 1;
         end
 end
