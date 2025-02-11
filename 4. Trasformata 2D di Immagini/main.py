@@ -5,8 +5,8 @@ import scipy.signal as signal
 import matplotlib.image as image
 
 if __name__ == '__main__':
-    image = image.imread("4. Trasformata 2D di Immagini/immagini/line_90deg.png")
-    image = np.mean(image, axis=2)
+    image = image.imread("4. Trasformata 2D di Immagini/immagini/saltandpepper_lena.jpg")
+    #image = np.mean(image, axis=2)
 
     image_fft = fft.fft2(image)
     image_fft_shifted = fft.fftshift(image_fft)

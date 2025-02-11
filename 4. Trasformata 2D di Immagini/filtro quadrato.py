@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.fft as fft
 import scipy.signal as signal
+import scipy.ndimage as ndimage
 import matplotlib.image as image
 
 if __name__ == '__main__':
@@ -20,10 +21,16 @@ if __name__ == '__main__':
             if band <= i <= max_x-band:
                 if band <= j <= max_y-band:
                     mask[i, j] = 1
-    print(mask)
-    masked_ps = image_ps * mask
 
-    plt.imshow(masked_ps, norm="log")
+    masked_ps = image_ps * mask
+    masked_image = image_fft_shifted * mask
+    result_image = fft.ifftshift(masked_image)
+    result_image = fft.ifft2(result_image)
+    result_image = np.real(result_image)
+
+    gaussian_ps = ndimage.gaussian_filter(image_ps, 1)
+    
+    plt.imshow(result_image)
     plt.xlabel('Frequenza Righe')
     plt.ylabel('Frequenza Colonne')
 
